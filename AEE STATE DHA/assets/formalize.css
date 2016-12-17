@@ -1,0 +1,290 @@
+/* @override http://slate.com/wp-content/themes/skeleton/formalize.css?ver=1.3 */
+
+/* `Widths
+----------------------------------------------------------------------------------------------------*/
+
+.input_tiny {
+  width: 50px;
+}
+
+.input_small {
+  width: 100px;
+}
+
+.input_medium {
+  width: 150px;
+}
+
+.input_large {
+  width: 200px;
+}
+
+.input_xlarge {
+  width: 250px;
+}
+
+.input_xxlarge {
+  width: 300px;
+}
+
+.input_full {
+  width: 100%;
+}
+
+/*
+  Added via JS to <textarea> and class="input_full".
+  Applies only to IE7. Other browsers don't need it.
+*/
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* `UI Consistency
+----------------------------------------------------------------------------------------------------*/
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="radio"] {
+	margin:0;
+	background:none;
+	border:none;
+	position: relative;
+	vertical-align: top;
+	top: 2px;
+	/* IE8, IE9, IE10 */
+	top: 3px\0;
+	padding:0\0;
+	margin:0\0;
+	/* IE7 */
+	*top: -0px;
+	*padding:0;
+	*margin:0;
+}
+
+input[type="checkbox"] {
+	background:none;
+	border:none;
+	position: relative;
+	vertical-align: top;
+	
+	padding:0;
+	top: 0px;
+	/* IE8, IE9, IE10 */
+	top: 3px\0;
+	padding:0\0;
+	margin:0\0;
+	/* IE7 */
+	*top: -0px;
+	*padding:0;
+	*margin:0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.pagination a.nextpostslink, .pagination a.previouspostslink { position: relative; top: 11px; }
+}
+/* iPad */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: top;
+    top: 2px;
+  }
+}
+
+/* iPhone 3 */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: top;
+    top: 0;
+  }
+}
+
+/* iPhone 4 */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: top;
+    top: 0;
+  }
+}
+
+a.button_green,
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+	display: inline-block;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	background-image: linear-gradient(top, #8DC85A 0%, #5E9B29 62%);
+	background-image: -o-linear-gradient(top, #8DC85A 0%, #5E9B29 62%);
+	background-image: -moz-linear-gradient(top, #8DC85A 0%, #5E9B29 62%);
+	background-image: -webkit-linear-gradient(top, #8DC85A 0%, #5E9B29 62%);
+	background-image: -ms-linear-gradient(top, #8DC85A 0%, #5E9B29 62%);
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #8DC85A), color-stop(0.62, #5E9B29));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8DC85A', endColorstr='#5E9B29',GradientType=0 );
+	border: 1px solid #4c8313;
+	border-radius: 4px 4px 4px 4px;
+	cursor: pointer;
+	font-size: 13px;
+	color: #FFFFFF !important;
+	font-weight:bold;
+	padding: 7px 16px 7px;
+	*padding: 5px 16px 5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px #4c8313;
+    width: auto !important;
+}
+
+a.button_green:hover,
+button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+	-moz-transition: background-color 0.15s ease-in-out 0s;
+    background-image: linear-gradient(top, #5E9B29 0%, #8DC85A 62%);
+	background-image: -o-linear-gradient(top, #5E9B29 0%, #8DC85A 62%);
+	background-image: -moz-linear-gradient(top, #5E9B29 0%, #8DC85A 62%);
+	background-image: -webkit-linear-gradient(top, #5E9B29 0%, #8DC85A 62%);
+	background-image: -ms-linear-gradient(top, #5E9B29 0%, #8DC85A 62%);
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #5E9B29), color-stop(0.62, #8DC85A));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5E9B29', endColorstr='#8DC85A',GradientType=0 );
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="input"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  font-family: Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+/*
+  Separate rule for Firefox.
+  Separate rule for IE, too.
+  Cannot stack with WebKit's.
+*/
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888;
+}
+
+:invalid {
+  /*
+    Suppress red glow that Firefox
+    adds to form fields by default,
+    even when user is still typing.
+  */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #888;
+  cursor: default;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+}
+
+optgroup {
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+* html select {
+  margin-top: 1px;
+}
+
